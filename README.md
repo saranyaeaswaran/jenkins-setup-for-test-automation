@@ -1,28 +1,27 @@
-#jenkins-setup-for-test-automation#
+#jenkins-setup-for-test-automation
 
-##Jenkins Install and Configure:##
+##Jenkins Install and Configure:
 
-	* Download jenkins war file from the [official site](https://jenkins.io/download/)
+*Download jenkins war file from the [official site](https://jenkins.io/download/)
 
-	* Navigate to downloaded file directory in cmd and run the below to start jenkins
-		○ **java -jar jenkins.war** >>>> this will start jenkins in the default port 8080
-		○ If any errors with future java version in the system, 
-			**§ java -jar jenkins.war --enable-future-java**
-			
-	* Access jenkins page using http://localhost:8080/
-		○ If we want to start jenkins in a particular port,
-			**java -jar jenkins.war --enable-future-java -httpPort=9090**
+*Navigate to downloaded file directory in cmd and run the below to start jenkins
+	○ **java -jar jenkins.war** >>>> this will start jenkins in the default port 8080
+	○ If any errors with future java version in the system, 
+		**§ java -jar jenkins.war --enable-future-java**
 
-	* In Jenkins UI > Go To - Manage Jenkins > Global Tool Configuration > 
-		○ Provide JDK home  :  Program files>Java and provide the SDK path
-		○ Maven home
+*Access jenkins page using http://localhost:8080/
+	○ If we want to start jenkins in a particular port,
+		**java -jar jenkins.war --enable-future-java -httpPort=9090**
+
+*In Jenkins UI > Go To - Manage Jenkins > Global Tool Configuration > 
+	○ Provide JDK home  :  Program files>Java and provide the SDK path
+	○ Maven home
 	
-	* To add new project to Jenkins - > New Item> Free style Project > Advanced settings under General > Use Customer Workspace and provide the project folder path
+*To add new project to Jenkins - > New Item> Free style Project > Advanced settings under General > Use Customer Workspace and provide the project folder path
 
-	* To add new build to the above configured project > Same page > Build > Add build step > Invoke top level maven targets> Select the maven version
-		○ Goals > Provide the corresponding maven command > test -PProgression *no need to mention mvn specifically as jenkins takes it automatically
+*To add new build to the above configured project > Same page > Build > Add build step > Invoke top level maven targets> Select the maven version
+	○ Goals > Provide the corresponding maven command > test -PProgression *no need to mention mvn specifically as jenkins takes it automatically
 	
-
 ## To trigger Jenkins build when code is pushed to Github##
 
 	* Step 1: Go to your GitHub repository where the project is stored and click on **‘Settings’**
