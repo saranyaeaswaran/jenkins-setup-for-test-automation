@@ -42,10 +42,10 @@
             4. Make sure the folder is in your PATH environment variable
             5. Go to command prompt and run the command `ngrok.exe http 8080`
             6. The next window will show the bwlow, copy the ip address of the system             
-                ![ngrok](ngrok.JPG)
+                ![ngrok](screenshots/ngrok.JPG)
 
 	- Now update the payload URL as http://<-->.ngrok.io/github-webhook/ (without 8080 port) (<--> as suggested by the system)
-		![url](url.JPG)
+		![url](screenshots/url.JPG)
 
 * Step 4: In **Which events would you like to trigger this webhook?** choose **Let me select individual events.** Then, check **Pull Requests** and **Pushes**. At the end of this option, make sure that **Active** is checked and click on **Add webhook**.
 
@@ -61,10 +61,10 @@
 	- Domain: By default **Global credentials (unrestricted)** is selected. Other option is: **Username and password**. Use default.
 	- Username – Specify the username that will be used to connect to the remote git repository. To find the username, run this command **git config --global user.name** in cmd prompt
 	- Specify the password for the above username. You can leave the ID and Description field empty
-	![auth](auth.JPG)
+	![auth](screenshots/auth.JPG)
 
 * Step 9: Click on the **Build Triggers** tab and then on the **GitHub hook trigger for GITScm polling**. Or, choose the trigger of your choice.
-	![poll](poll.JPG)
+	![poll](screenshots/poll.JPG)
 * Step 10 : Triggering the Jenkins Job to Run with Every Code Commit,
 	- Click on the **Build** tab under the newly created Jenkins project, 
 	- Click on **Add build step**
